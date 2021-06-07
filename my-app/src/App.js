@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import Logo from './CALogo.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={Logo} className="App-logo" alt="logo" />
+      </header>
+      <footer>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Made by Kiera Bonaparte
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          className="Code-link"
+          href="https://github.com/kierabon/dictionary-project"
           target="_blank"
           rel="noopener noreferrer"
         >
           View code on GitHub
         </a>
-      </header>
+      </footer>
     </div>
   );
 }
