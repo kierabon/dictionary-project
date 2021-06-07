@@ -7,6 +7,9 @@ function App() {
       <header className="App-header">
         <img src={Logo} className="App-logo" alt="logo" />
       </header>
+      <p>
+        
+      </p>
       <footer>
         <p>
           Made by Kiera Bonaparte
