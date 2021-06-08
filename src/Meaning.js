@@ -14,7 +14,7 @@ return(
                 <br />
                 <em>{definition.example}</em>
                 <br/>
-                <li>{definition.synonyms}</li>
+                
             </p>
             </div>
         );

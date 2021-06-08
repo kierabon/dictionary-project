@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import Results from "./Results";
+import "./Dictionary.css";
 
 
 export default function Dictionary() {
@@ -23,6 +24,7 @@ return (
     <div className="Dictionary">
         <form onSubmit={search}>
             <input type="search" autoFocus={true} onChange={updateKeyword}/>
+               <input type="submit"className="btn btn-dark m-3" />
         </form>
         <br />
         
