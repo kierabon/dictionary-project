@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from './CALogo.png';
+import Logo from './CALogo (1).png';
 import Dictionary from "./Dictionary";
 import './App.css';
 

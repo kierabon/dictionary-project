@@ -5,31 +5,44 @@ import "./Dictionary.css";
 
 
 export default function Dictionary() {
-    const [keyword, setKeyword]= useState("");
+    const [keyword, setKeyword]= useState("sunset");
     const [results,setResults]= useState(null);
+    const [loaded, setLoaded]= useState(false);
     
     function handleResponse(response){
         setResults(response.data[0]);
     }
-    function search(event){
-        event.preventDefault();
-
-        let apiUrl=`https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
+    function search (){
+  let apiUrl=`https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
         axios.get(apiUrl).then(handleResponse);
+    }
+    function handleSubmit(event){
+        event.preventDefault();
+      search();
     }
     function updateKeyword(event){
         setKeyword(event.target.value);
     }
-return (
+ function load(){
+        setLoaded(true);
+        search();
+ }
+ if(loaded){
+  return (
     <div className="Dictionary">
-        <form onSubmit={search}>
-            <input type="search" autoFocus={true} onChange={updateKeyword}/>
-               <input type="submit"className="btn btn-dark m-3" />
-        </form>
-        <br />
         
+        <section>
+            <h5>What do you want to lookup?</h5>
+        <form onSubmit={handleSubmit}>
+            <input type="search" autoFocus={true} onChange={updateKeyword} className="search" />
+               <input type="submit"className="btn btn-dark m-3" value="Search" />
+        </form>
+        </section>
+        <br />
         <Results results={results}/>
+            
     </div>
-);
+);} else{ load();
+            return "Loading..." }
 
 }
