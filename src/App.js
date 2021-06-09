@@ -11,7 +11,7 @@ function App() {
         <img src={Logo} className="App-logo" alt="logo" />
       </header>
     
-       <Dictionary /> 
+       <Dictionary defaultKeyword="sunset" /> 
       
       <footer>
         <p>

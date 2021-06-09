@@ -17,7 +17,7 @@ return(
                 {definition.example}</div>
                 
                 <Synonyms synonyms={definition.synonyms} />
-                
+                <br />
             </div>
         );
         })} <br />
