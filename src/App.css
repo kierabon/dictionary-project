@@ -1,12 +1,19 @@
 .App-logo {
-  height: 200px;
-  width: 200px;
+  height: 130px;
+  width: 130px;
   margin: 0 auto;
   display: block;
+  padding-bottom: 0;
 }
 footer {
   text-align: center;
 }
 .App {
   background: #f5f4f4;
+}
+header h1 {
+  text-align: center;
+  color: rgba(17, 1, 4, 0.849);
+  line-height: 10px;
+  font-variant: small-caps;
 }

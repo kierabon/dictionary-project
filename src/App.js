@@ -9,6 +9,7 @@ function App() {
       <div className="col">
       <header className="App-header">
         <img src={Logo} className="App-logo" alt="logo" />
+      <h1>Dictionary</h1>
       </header>
     
        <Dictionary defaultKeyword="sunset" /> 
